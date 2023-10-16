@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../python_workspace/py_speech_cog"
+		},
+		{
+			"path": "../../etri_mobile_phone_korean_voice_DB"
+		}
+	],
+	"settings": {}
+}
