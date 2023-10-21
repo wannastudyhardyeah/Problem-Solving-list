@@ -2,7 +2,6 @@ import sys
 import heapq as hq
 
 def solution():
-
     heap_queue = []
     n = int(sys.stdin.readline().strip())
     for i in range(n):

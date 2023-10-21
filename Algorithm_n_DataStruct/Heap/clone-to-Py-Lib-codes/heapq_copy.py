@@ -1,5 +1,5 @@
 
-def heapify(x):
+def heapify_copy(x):
     """Transform list into a heap, in-place, in O(len(x)) time."""
     n = len(x)
     # Transform bottom-up.
@@ -12,9 +12,9 @@ def heapify(x):
     # this is (2*j+1-1)/2 = j
     # so j-1 is the largest, and that's again (n//2-1.)
     for i in reversed(range(n//2)):
-        _siftup(x, i)
+        _siftup_copy(x, i)
 
-def _siftup(heap, pos):
+def _siftup_copy(heap, pos):
     # 마지막 위치: heap의 길이
     endpos = len(heap)
     # 시작 위치: 현재 위치(인자 pos)
@@ -46,9 +46,9 @@ def _siftup(heap, pos):
     # The leaf at pos is empty now.  Put newitem there, and bubble it up
     # to its final resting place (by sifting its parents down).
     heap[pos] = newitem
-    _siftdown(heap, startpos, pos)
+    _siftdown_copy(heap, startpos, pos)
 
-def _siftdown(heap, startpos, pos):
+def _siftdown_copy(heap, startpos, pos):
     newitem = heap[pos]
     # Follow the path to the root, 
     # moving parents down until finding a place
@@ -73,7 +73,7 @@ def _siftdown(heap, startpos, pos):
 
 if __name__ == '__main__':
     input_list = [ 9, 100, 2, 3, 1, 23, 43, 13, 12]
-    heapify(input_list)
+    heapify_copy(input_list)
     print(input_list)
 
 '''

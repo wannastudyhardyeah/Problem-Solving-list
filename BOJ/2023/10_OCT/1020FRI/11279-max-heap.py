@@ -10,7 +10,7 @@ def solution(howmany_opers, int_arr_val_for_each_oper):
           - 0이면 => 가장 큰 값 출력하고 pop '''
     pri_queue = PriorityQueue()
 
-    for idx, i in enumerate(int_arr_val_for_each_oper, start=1):
+    for i in int_arr_val_for_each_oper:
         # print(f'========\nPQ: {pri_queue}\n========')
         # i(x)가 자연수인 경우
         if (i > 0):
